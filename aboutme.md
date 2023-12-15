@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About us
+title: Team
 subtitle: What you need to know about us
 ---
 
