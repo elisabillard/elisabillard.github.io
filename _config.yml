@@ -13,17 +13,17 @@
 title: The representation of women in the movie industry around the world
 
 # Your name to show in the footer
-author: Elisa Billard
+author: Coline Maille, Amélie Rajon, Anna-Rose Gryspeert, Jeanne Allocio, Elisa Billard
 
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
-  About Me: "About us"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-  Author's home: "https://deanattali.com"
+  Team: "About us"
+  #Resources:
+  #  - Beautiful Jekyll: "https://beautifuljekyll.com"
+  #Author's home: "https://deanattali.com"
 
 ################
 # --- Logo --- #
