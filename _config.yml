@@ -21,6 +21,7 @@ author: Coline Maille, Amélie Rajon, Anna-Rose Gryspeert, Jeanne Allocio, Elisa
 
 navbar-links:
   Team: "/aboutme.md"
+  Test: "Test"
   #Resources:
   #  - Beautiful Jekyll: "https://beautifuljekyll.com"
   #Author's home: "https://deanattali.com"
