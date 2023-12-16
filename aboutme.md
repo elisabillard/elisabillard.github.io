@@ -17,6 +17,6 @@ We are the 5 students who conducted the project:
 | Elisa Billard | [elisa.billard@epfl.ch](mailto:elisa.billard@epfl.ch) |
 | Jeanne Allocio | [jeanne.allocio@epfl.ch](mailto:jeanne.allocio@epfl.ch) |
 
-Our project is part of the 2023 edition of the *Applied Data Analysis* ([CS-401](https://epfl-ada.github.io/teaching/fall2022/cs401/)) at [EPFL](https://www.epfl.ch/en/).
+Our project is part of the 2023 edition of the *Applied Data Analysis* ([CS-401](https://epfl-ada.github.io/teaching/fall2022/cs401/)) class at [EPFL](https://www.epfl.ch/en/).
 
 Check out our project on [GitHub](https://github.com/epfl-ada/ada-2023-project-teamcajare2023).
