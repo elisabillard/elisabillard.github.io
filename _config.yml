@@ -45,6 +45,26 @@ navbar-links:
 # --- Footer social media links --- #
 #####################################
 
+# Team names, titles and social links
+people:
+- name: Coline Maille
+  pic: Coline
+  alt: Coline picture picture
+  social:
+    - title: github
+      url: #
+    - title: linkedin
+      url: #
+      
+- name: Amélie Rajon
+  pic: Amelie
+  alt: Amelie picture
+  social:
+    - title: github
+      url: https://github.com/amelierajon
+    - title: linkedin
+      url: www.linkedin.com/in/amelie-rajon
+
 # Select the social network links that you want to show in the footer.
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
