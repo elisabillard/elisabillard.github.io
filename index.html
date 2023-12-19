@@ -6,8 +6,50 @@ cover-img:
   - "/assets/img/home2.jpeg"
 ---
 
+<style>
+  #toc_container {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .toc_title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .toc_list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .toc_list > li {
+    margin-bottom: 8px;
+  }
+
+  .toc_list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .toc_list a:hover {
+    color: #e44d26; /* Change to your desired hover color */
+  }
+
+  .toc_list ul {
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 1px solid #ddd;
+  }
+</style>
+
 <div id="toc_container">
-  <p class="toc_title">Contents</p>
+  <p class="toc_title">Table of Content</p>
   <ul class="toc_list">
     <li><a href="#Introduction">1 Introduction</a>
       <ul>
@@ -15,8 +57,13 @@ cover-img:
         <li><a href="#First_Sub_Point_2">1.2 First Sub Point 2</a></li>
       </ul>
     </li>
-    <li><a href="#Second_Point_Header">2 Second Point Header</a></li>
-    <li><a href="#Third_Point_Header">3 Third Point Header</a></li>
+    <li><a href="#Part_1">2 Quantifying gender inequalities</a></li>
+    <li><a href="#Part_2">3 Gender roles in movies</a></li>
+    <li><a href="#Part_3">4 Public perception of gendered movies</a></li>
+    <li><a href="#Part_4">5 Inequalities around the world</a></li>
+    <li><a href="#Conclusion">6 Conclusion</a></li>
+    <li><a href="#Ethical">7 Ethical Risk Assessment</a></li>
+
   </ul>
 </div>
 
@@ -26,14 +73,27 @@ cover-img:
 
   <h2 id="Introduction">Introduction</h2>
   {% include introduction.html %}
-
-
-
   
   <img src="/assets/img/distrib_age.png" alt="Distribution of age between actors and actresses">
   <iframe src="/assets/img/movie_genres.html" width="800" height="600" frameborder="0"></iframe>
 
-  <p>Text</p>
+  <h2 id="Part_1">2 Quantifying gender inequalities</h2>
+  {% include part1.html %}
+
+  <h2 id="Part_2">3 Gender roles in movies</h2>
+  {% include part2.html %}
+
+  <h2 id="Part_3">4 Public perception of gendered movies</h2>
+  {% include part3.html %}
+
+  <h2 id="Part_4">5 Inequalities around the world</h2>
+  {% include part4.html %}
+
+  <h2 id="Conclusion">6 Conclusion</h2>
+  {% include conclusion.html %}
+
+  <h2 id="Ethical">7 Ethical Risk Assessment</h2>
+  {% include ethical.html %}
 
 </body>
 
