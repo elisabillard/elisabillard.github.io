@@ -9,14 +9,17 @@ cover-img:
 <div id="toc_container">
   <p class="toc_title">Contents</p>
   <ul class="toc_list">
-    <li><a href="#Introduction">1 Introduction</a>
+    <li><a href="#First_Point_Header">1 Introduction</a>
       <ul>
         <li><a href="#First_Sub_Point_1">1.1 First Sub Point 1</a></li>
         <li><a href="#First_Sub_Point_2">1.2 First Sub Point 2</a></li>
       </ul>
     </li>
-    <li><a href="#Second_Point_Header">2 Second Point Header</a></li>
-    <li><a href="#Third_Point_Header">3 Third Point Header</a></li>
+    <li><a href="#Second_Point_Header">2 Part 1 : Quantitative analysis of gender inequalities in movies</a></li>
+    <li><a href="#Third_Point_Header">3 Part 2 : Qualitative analysis of gender representation in movies</a></li>
+    <li><a href="#Fourth_Point_Header">4 Part 3 : Analysis of the reception of movies by the public</a></li>
+    <li><a href="#Fifth_Point_Header">5 Part 4 : Analysis by geographical production region</a></li>
+    <li><a href="#Sixth_Point_Header">6 Conclusion </a></li>
   </ul>
 </div>
 
@@ -24,16 +27,28 @@ cover-img:
 
 <body id="page-top" class="index">
 
-  <h2 id="Introduction">Introduction</h2>
+  <h2 id="First_Point_Header">Introduction</h2>
   {% include introduction.html %}
 
+  <h2 id="Second_Point_Header">Part 1 : Quantitative analysis of gender inequalities in movies</h2>
+  {% include part1.html %}
+  
+  <h2 id="Third_Point_Header">Part 2 : Qualitative analysis of gender representation in movies</h2>
+  {% include part2.html %}
+  
+  <h2 id="Fourth_Header">Part 3 : Analysis of the reception of movies by the public</h2>
+  {% include part3.html %}
 
+  <h2 id="Fifth_Point_Header">Part 4 : Analysis by geographical production region</h2>
+  {% include part4.html %}
+
+  <h2 id="Sixth_Point_Header">Conclusion</h2>
+  {% include part4.html %}
 
   
   <img src="/assets/img/distrib_age.png" alt="Distribution of age between actors and actresses">
   <iframe src="/assets/img/movie_genres.html" width="800" height="600" frameborder="0"></iframe>
 
-  <p>Text</p>
 
 </body>
 
