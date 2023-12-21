@@ -1,29 +1,74 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Center the table */
+        .center-table {
+            margin: 0 auto;
+        }
+
+        /* Add other styles as needed */
+        table {
+            border-collapse: collapse;
+            width: 50%; /* Adjust the width as needed */
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
 <p>Now that we have understood the differences in women's representation in the movie industry itself, we are interested in the consequences 
 they have on the public! It seems that blockbusters often feature men as their main characters. When examining the 10 movies with the highest box-office 
-revenue of all time on the Wikipedia page  [List of highest-grossing films](https://en.wikipedia.org/wiki/List_of_highest-grossing_films), we see that 
+revenue of all time on the Wikipedia page <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_films">List of highest-grossing films</a>, we see that 
 none of these movies showcase a female character as the sole main character, in contrast to several movies where a male character takes on the role of the sole main character.</p>
 
 <img src="assets/img/Top10Movies.jpg" alt="Top 10 Movies">
 
+Therefore, we are interested in analyzing whether the gender of the main character or the percentage of female characters in a movie has an impact on its success.
 
+<h4>Perception of the public</h4>
+<p>First, we conducted an observational study to examine how the proportion of female characters in a movie correlates with its rating. 
+We initially divided the dataset into two distinct groups: movies with a percentage of female characters above the median (treatment group) 
+and those below the median (control group). Subsequently, to enhance the study's robustness, we executed exact matching based on release 
+year (binned into 5-year intervals), country, and movie genre. Following this, we applied linear regression analysis, obtaining the subsequent results:</p>
 
 <h4>Linear Regression  AverageRating ~ PercentageofFemale </h4>
 
-    <table border="1">
-        <tr>
-            <th></th>
-            <th>Coef</th>
-            <th>P-value</th>
-        </tr>
-        <tr>
-            <th>Intercept</th>
-            <td>6.2102</td>
-            <td>0.000</td>
-        </tr>
-        <tr>
-            <th>PercentageofFemale</th>
-            <td>-0.0019</td>
-            <td>0.000</td>
-        </tr>
-    </table>
+    <div class="center-table">
+        <table>
+            <tr>
+                <th></th>
+                <th>Coef</th>
+                <th>P-value</th>
+            </tr>
+            <tr>
+                <th>Intercept</th>
+                <td>6.2102</td>
+                <td>0.000</td>
+            </tr>
+            <tr>
+                <th>PercentageofFemale</th>
+                <td>-0.0019</td>
+                <td>0.000</td>
+            </tr>
+        </table>
+    </div>
+
+<p>To conclude this first causal analysis, we see that the percentage of female characters has a significant negative impact on the movie 
+rating at the 95% significance level, as the p-value is smaller than 0.05, and the coefficient is slightly negative. Thus the rating 
+given by IMDB users is slightly decreasing with an increasing percentage of women in the movie. </p>
+
+<p>The main character of a movie is also very important: indeed, the portrayal of the main character influences how audiences perceive the movie's 
+themes, messages, and overall quality. That’s why we performed a second observational study, but this time on the gender of the main character's 
+influence on the movie rating. Like in the previous causal analysis, we performed matching, where the treatment group consists of movies for which the 
+main character is a woman, and the control group consists of movies for which the main character is a man. We then performed a linear regression to see 
+how the main character influences the movie rating.</p>
 
