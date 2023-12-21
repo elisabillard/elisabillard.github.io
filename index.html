@@ -115,19 +115,14 @@ font-family: 'Lora', serif;
 
 <!-- Quizz part -->
 
-<body onload="NextQuestion(1)">
+<body onload="NextQuestion(0)">
   <main>
       <!-- creating a modal for when quiz ends -->
       <div class="modal-container" id="score-modal">
 
           <div class="modal-content-container">
 
-              <h1>Congratulations, Quiz Completed.</h1>
-
               <div class="grade-details">
-                  <p>Attempts : 10</p>
-                  <p>Wrong Answers : <span id="wrong-answers"></span></p>
-                  <p>Right Answers : <span id="right-answers"></span></p>
                   <p>Grade : <span id="grade-percentage"></span>%</p>
                   <p ><span id="remarks"></span></p>
               </div>
@@ -143,8 +138,8 @@ font-family: 'Lora', serif;
       <div class="game-quiz-container">
 
           <div class="game-details-container">
-              <h1>Score : <span id="player-score"></span> / 5</h1>
-              <h1> Question : <span id="question-number"></span> / 5</h1>
+              <p>Score : <span id="player-score"></span> / 5</p>
+              <p> Question : <span id="question-number"></span> / 5</p>
           </div>
 
           <div class="game-question-container">
