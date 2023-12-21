@@ -1,22 +1,35 @@
 <body>
 
-  <p>Now that we have analyzed the general inequalities that women face in the movie industry and the impact of gender on a movie's success, we will explore whether the cultural background of a country can alter this impact, since stereotypes about women vary from culture to culture. 
-    To do so, we will examine how gender influences movies across three geographical areas—USA, India, and Europe—each representing significant movie industries: Hollywood, Bollywood and European movies. 
-    But are our preconceived ideas true when it comes to the presence of women in the plot ? That’s what we will try to figure out!</p>
+  <p>Now that we have analyzed the general inequalities that women face in the movie industry and the impact of gender on a movie's success, we will explore whether the cultural background of a country can alter this impact, since stereotypes about women vary from culture to culture. To do so, we will examine how genders are represented across three geographical areas—USA, India, and Europe—each representing significant movie industries: Hollywood, Bollywood and European movies.</p>
     
-  <p>Our aim is to analyze the percentage of women in films in our different regions of interest: USA, India and Europe. To do so, we can study the following map, which represents the percentage of women appearing in films around the world.</p> 
+  <p>Our aim is to analyze the percentage of women in movies in the 3 different regions of interest: USA, India and Europe. To do this, we can study the following map, which represents the average percentage of female characters in films by country, worldwide.</p> 
   
   <iframe src="assets/plots/map_visualization.html" width="900" height="550" frameborder="0"></iframe>
 
-  <p>If we compare the different regions we're interested in, we can see that India has one of the highest percentages of women in movies, at almost 35%. The United States is a little behind with a percentage of women of around 30%.  In Europe, on the other hand, we can see a segmentation 
-  between Eastern and Western Europe, where the percentage is much higher in the West (around 30%) than in the East (around 20%). </p>
+  <p>If we compare the different regions we're interested in, we can see that India has one of the highest percentages of women in movies, at almost 35%. The United States is a little behind with a percentage of women of around 30%.  In Europe, on the other hand, we can see a segmentation between Eastern and Western Europe, where the percentage is much higher in the West (around 30%) than in the East (around 20%). We calculated the average percentage of female characters in movies from each of these three regions, and obtained the following results: for the USA, the average is 33.7%, for India, 33.5%, and for Europe, 31.6%. There seems to be only a slight difference, but let’s take a closer look at these numbers!</p>
 
-  <p>To address potential confounding variables that might influence the gender representation between the USA, Europe and India, we first exactly match the movies on the release year and the movie genre. As a result, the following analysis
-  is done on triplets of movies from the 3 regions of interest that have the same release year and genre. However, it is crucial to recognize the challenges and limitations of this approach. Exact matching based solely on release year and movie genre might not account for all potential confounders or nuances influencing gender representation in films. Factors like cultural context, directorial choices, scriptwriting, and societal norms beyond genre and release year could still impact the portrayal of women in movies.</p>
+  <p>First, to address potential confounding variables that might influence the gender representation between the USA, Europe and India, we performed exact matching based on the release year and the movie genre. As a result, the following analysis is done on triplets of movies from the 3 regions of interest that have the same release year and genre. However, it is crucial to recognize the challenges and limitations of this approach. Exact matching based solely on release year and movie genre might not account for all potential confounders or nuances influencing gender representation in films. Factors like cultural context, directorial choices, scriptwriting, and societal norms beyond genre and release year could still impact the portrayal of women in movies.
+  Then, after performing the matching, to compare the average percentage of women between the 3 regions of interest, we performed an ANOVA, and obtained the following results:</p>
+
+  <div class="center-table">
+      <table>
+          <tr>
+              <th></th>
+              <th>Statistic</th>
+              <th>P-value</th>
+          </tr>
+          <tr>
+              <td>14.31</td>
+              <td>6.23e-07</td>
+          </tr>
+      </table>
+  </div>
+
+  <p>As the p-value is smaller than 0.05, this implies that the difference in the percentage of female characters is significantly different in at least one of the three regions. However, it does not tell us which groups are different from each other. We therefore carried out a post hoc test, the Tukey test, to make pairwise comparisons between the means of each group. We found that the difference between the percentage of actresses was significantly different between the EU and the US, and between the EU and India. The results of this test are visualized on the boxplot below:</p>
 
   <iframe src="assets/plots/box_plot_tukey.html" width="800" height="625" frameborder="0"></iframe>
 
 
-  <p>The test results reveal an unexpected trend: European movies tend to feature approximately 2% fewer feminine characters compared to American and Indian cinema. This finding challenges common perceptions, as European cinema might be stereotypically associated with a cultural inclination towards more balanced or prominent portrayals of feminine characters, distinct from American or Indian cinema. </p>
+  <p>The test results reveal an unexpected trend: European movies tend to feature approximately 2% fewer feminine characters compared to American and Indian cinema. This finding challenges common perceptions, as European cinema might be stereotypically associated with a cultural inclination towards more balanced or prominent portrayals of feminine characters, distinct from American or Indian cinema.</p>
 
 </body>
