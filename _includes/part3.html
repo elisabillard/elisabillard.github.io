@@ -40,7 +40,7 @@ We initially divided the dataset into two distinct groups: movies with a percent
 and those below the median (control group). Subsequently, to enhance the study's robustness, we executed exact matching based on release 
 year (binned into 5-year intervals), country, and movie genre. Following this, we applied linear regression analysis, obtaining the subsequent results:</p>
 
-<h4>Linear Regression  AverageRating ~ PercentageofFemale </h4>
+<h4>Linear Regression  AverageRating ~ Percentage of Female Characters </h4>
 
     <div class="center-table">
         <table>
@@ -72,7 +72,7 @@ influence on the movie rating. Like in the previous causal analysis, we performe
 main character is a woman, and the control group consists of movies for which the main character is a man. We then performed a linear regression to see 
 how the main character influences the movie rating.</p>
 
-<h4>Linear Regression: Average Rating ~ Percentage of Female Characters</h4>
+<h4>Linear Regression: Average Rating ~ Feminine Main Character</h4>
 
     <div class="center-table">
         <table>
@@ -87,14 +87,14 @@ how the main character influences the movie rating.</p>
                 <td>0.000</td>
             </tr>
             <tr>
-                <th>PercentageofFemale</th>
+                <th>MainCharFemale</th>
                 <td>-0.0769</td>
                 <td>0.000</td>
             </tr>
         </table>
     </div>
 
-<p>The presence of a slightly negative coefficient, coupled with a p-value below 0.05,  suggests that movies featuring a woman as the main character tend to receive lower 
+<p>The presence of a slightly negative coefficient, coupled with a p-value below 0.05, suggests that movies featuring a woman as the main character tend to receive lower 
 ratings from IMDb users compared to those with a man as the main character.One hypothesis is that viewers might have preconceived ideas about the type of roles women should 
 play in movies. Therefore, when female characters challenge or deviate from these expectations, it can lead to discomfort or dissatisfaction among some audience members, affecting 
 their perception of the film. But even though we conducted a causal analysis, a bias might be introduced by the audience diversity of IMDB or by the success of the director of the movies.</p>
