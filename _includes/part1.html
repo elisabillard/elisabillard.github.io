@@ -1,82 +1,52 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Table</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+<p>First, we need to explore quantitatively the extent of inequalities in the representation of women: 
+    are actresses really younger than actors? What is the difference between the proportion of actresses and actors? 
+    Which movie genres are more prone to inequalities?</p>
 
-        table {
-            width: 50%; /* Adjust the width as needed */
-            border-collapse: collapse;
-            margin: auto;
-            margin-top: 20px; /* Add some top margin for spacing */
-        }
+<p>Let’s look at the age of actors and actresses! The age is a first easy insight into our data, and at the same time 
+    quite symptomatic of gender stereotypes. As expected actresses are usually younger than actors: </p>
 
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
-</head>
+<iframe src="/assets/plots/box_plot_age.html" width="825" height="625" frameborder="0"></iframe>
 
-<body>
-    <p>First, we need to explore quantitatively the extent of inequalities in the representation of women: 
-        are actresses really younger than actors? What is the difference between the proportion of actresses and actors? 
-        Which movie genres are more prone to inequalities?</p>
+<h4>T-test Distribution of Age between Actors and Actresses</h4>
 
-    <p>Let’s look at the age of actors and actresses! The age is a first easy insight into our data, and at the same time 
-        quite symptomatic of gender stereotypes. As expected actresses are usually younger than actors: </p>
+    <table border="1">
+        <tr>
+            <th>P-value</th>
+            <th>Statistic</th>
+        </tr>
+        <tr>
+            <td>0.0</td>
+            <td>-128.5</td>
+        </tr>
+    </table>
 
-    <iframe src="/assets/plots/box_plot_age.html" width="825" height="625" frameborder="0"></iframe>
+<p>And the observed difference is significantly different with a nearly null p-value. 
+    We are not surprised by this information as this is the first impression we get when looking at most popular movies. 
+    Older men and younger women in relationships are the common trope of many movies. 
+    This is symptomatic of societal gender norms, women are at the peak of their beauty and career when they are young, 
+    while men age like good wine. </p>
 
-    h4>T-test Distribution of Age between Actors and Actresses</h4>
+<p>Another interesting first insight is to examine the representation of men and women on screen, 
+    meaning looking at the distribution of female and male characters in the movies from our dataset. 
+    Let’s plot the proportion of female characters: </p>
 
-        <table border="1">
-            <tr>
-                <th>P-value</th>
-                <th>Statistic</th>
-            </tr>
-            <tr>
-                <td>0.0</td>
-                <td>-128.5</td>
-            </tr>
-        </table>
+<iframe src="/assets/plots/percentage_female.html" width="800" height="500" frameborder="0"></iframe>
 
-    <p>And the observed difference is significantly different with a nearly null p-value. 
-        We are not surprised by this information as this is the first impression we get when looking at most popular movies. 
-        Older men and younger women in relationships are the common trope of many movies. 
-        This is symptomatic of societal gender norms, women are at the peak of their beauty and career when they are young, 
-        while men age like good wine. </p>
+<p> We observe a very skewed distribution! Indeed, many films have no female characters at all. 
+    How can this be?  We can't be sure that no women appear in the movie, but they don't appear in the list of characters, 
+    which means that they are not among the most seen characters. What's more, the same is not true for men: 
+    none of the films have no male characters at all! 
+    We see a clear inequality in the representation of men and women on screen.</p>
 
-    <p>Another interesting first insight is to examine the representation of men and women on screen, 
-        meaning looking at the distribution of female and male characters in the movies from our dataset. 
-        Let’s plot the proportion of female characters: </p>
+<p>Does this representation change with movie genres ? We want to see if some genres are more equal, 
+    at least in terms of the proportion of characters. Let’s plot this distribution for the 16 most represented 
+    genres in our data set:</p>
 
-    <iframe src="/assets/plots/percentage_female.html" width="800" height="500" frameborder="0"></iframe>
+<iframe src="/assets/plots/percentage_by_genre.html" width="800" height="500" frameborder="0"></iframe>
 
-    <p> We observe a very skewed distribution! Indeed, many films have no female characters at all. 
-        How can this be?  We can't be sure that no women appear in the movie, but they don't appear in the list of characters, 
-        which means that they are not among the most seen characters. What's more, the same is not true for men: 
-        none of the films have no male characters at all! 
-        We see a clear inequality in the representation of men and women on screen.</p>
-
-    <p>Does this representation change with movie genres ? We want to see if some genres are more equal, 
-        at least in terms of the proportion of characters. Let’s plot this distribution for the 16 most represented 
-        genres in our data set:</p>
-
-    <iframe src="/assets/plots/percentage_by_genre.html" width="800" height="500" frameborder="0"></iframe>
-
-    <p>We observe that the movie genre with the lowest percentage of female characters is 'short film,' 
-        closely followed by 'action' and 'adventure,' as well as 'crime fiction', with a percentage of female characters 
-        lower than 30%. Among the 16 most represented genres, the one with the highest percentage of female characters 
-        is the 'Romance' genre. This illustrates the perception that men are often portrayed as adventurous and 
-        courageous heroes, while women are predominantly defined by their romantic relationships. </p>
-
-    </body>
+<p>We observe that the movie genre with the lowest percentage of female characters is 'short film,' 
+    closely followed by 'action' and 'adventure,' as well as 'crime fiction', with a percentage of female characters 
+    lower than 30%. Among the 16 most represented genres, the one with the highest percentage of female characters 
+    is the 'Romance' genre. This illustrates the perception that men are often portrayed as adventurous and 
+    courageous heroes, while women are predominantly defined by their romantic relationships. 
+</p>

@@ -26,16 +26,35 @@
 
 <p>It's interesting to cluster character types together, but let's see if, by knowing the words that characterize 
     a character, we can find out its gender! If we are able to find it, this means that the roles are very stereotypical. 
-    </p>
+    
+</p>
 
-<p>QUIZ</p>
+    <script type="text/javascript" src="https://form.jotform.com/jsform/233544575748367"></script>
 
-<p>Let’s see if a machine learning classifier could do it! We provide the classifier with the agent verbs, 
+
+<p>You have classified words according to your preconcieved ideas on gendered roles! This suggests that it is usually 
+    possible to classify stereotipical characters from their attributes and actions.
+    Let’s see if a machine learning classifier could do it! We provide the classifier with the agent verbs, 
     patient verbs and character attributes as input features, and it outputs the predicted gender.</p>
 
-<p>RESULT CLASSIFIER</p>
+    <h4>Classifier Results</h4>
 
-<p>An accuracy rate of 0.65 suggests that the classifier has a certain level of predictive power above randomness. 
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>Accuracy</th>
+            <th>Loss</th>
+        </tr>
+        <tr>
+            <th>4 layer Simple Neural Network </th>
+            <td>0.658</td>
+            <td>0.633</td>
+        </tr>
+        
+    </table>
+
+
+<p>An accuracy rate of 0.66 suggests that the classifier has a certain level of predictive power above randomness. 
     This indicates that there might be a discernible bias in the roles typically portrayed by women and men in movies: 
     first, women might frequently be cast in nurturing, supportive, or romantic roles, whereas men might often portray 
     heroic, dominant, or action-oriented characters. Second, female characters might sometimes lack depth or complexity 
@@ -50,7 +69,25 @@
     To perform a causal analysis, we matched the movies on the release year, the movie genre, and the country of release.
 </p>
 
-<p>RESULTS OF SENTIMENT WITH PERCENTAGE OF FEMALE</p>
+<h4>Linear Regression Sentiment ~ Main Character Female </h4>
+
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>Coef</th>
+            <th>P-value</th>
+        </tr>
+        <tr>
+            <th>Intercept</th>
+            <td>0.0416</td>
+            <td>0.000</td>
+        </tr>
+        <tr>
+            <th>Main Character Female</th>
+            <td>0.0118</td>
+            <td>0.000</td>
+        </tr>
+    </table>
 
 <p>The coefficient associated with the percentage of females to predict the sentiment of the movie is significant 
     but very low. Thus the percentage of females is slightly positively associated with the sentiment of the movie. 
@@ -59,7 +96,25 @@
     besides a man. To dig deeper in this, let’s analyze the influence of the main character’s gender on the sentiment.
 </p>
 
-<p>RESULTS OF SENTIMENT WITH MAIN CHARACTER’S GENDER</p>
+<h4>Linear Regression Sentiment ~ Percentage of Female </h4>
+
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>Coef</th>
+            <th>P-value</th>
+        </tr>
+        <tr>
+            <th>Intercept</th>
+            <td>0.0296</td>
+            <td>0.000</td>
+        </tr>
+        <tr>
+            <th>Percentage of Female</th>
+            <td>0.0004</td>
+            <td>0.000</td>
+        </tr>
+    </table>
 
 <p>Movies with a feminine main character tend to have a more positive sentiment than movies with a masculine main 
     character as the coefficient representing a feminine main character is positive, thus increasing the sentiment score. 
