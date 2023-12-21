@@ -72,3 +72,38 @@ influence on the movie rating. Like in the previous causal analysis, we performe
 main character is a woman, and the control group consists of movies for which the main character is a man. We then performed a linear regression to see 
 how the main character influences the movie rating.</p>
 
+<h4>Linear Regression: Average Rating ~ Percentage of Female Characters</h4>
+
+    <div class="center-table">
+        <table>
+            <tr>
+                <th></th>
+                <th>Coef</th>
+                <th>P-value</th>
+            </tr>
+            <tr>
+                <th>Intercept</th>
+                <td>6.3579</td>
+                <td>0.000</td>
+            </tr>
+            <tr>
+                <th>PercentageofFemale</th>
+                <td>-0.0769</td>
+                <td>0.000</td>
+            </tr>
+        </table>
+    </div>
+
+<p>The presence of a slightly negative coefficient, coupled with a p-value below 0.05,  suggests that movies featuring a woman as the main character tend to receive lower 
+ratings from IMDb users compared to those with a man as the main character.One hypothesis is that viewers might have preconceived ideas about the type of roles women should 
+play in movies. Therefore, when female characters challenge or deviate from these expectations, it can lead to discomfort or dissatisfaction among some audience members, affecting 
+their perception of the film. But even though we conducted a causal analysis, a bias might be introduced by the audience diversity of IMDB or by the success of the director of the movies.</p>
+
+<h4>Perception of the film industry</h4>
+<p>The Oscars are one of the most prestigious and globally recognized awards in the entertainment industry, specifically for the film sector. Organized by the Academy of Motion Picture Arts and Sciences, 
+the Oscars honor excellence in various categories related to filmmaking. Thus, to explore the potential influence of the main character's gender on a movie's reception within the film industry, we sought 
+to examine its correlation with the likelihood of receiving an Oscar nomination.</p>
+
+<p>We first excluded gendered Oscar categories for actors and actresses, which would bias our results;  we also excluded categories that do not seem to be related to the main character, and so neither to its gender.
+Then we conducted a new causal analysis by matching exactly movies on their release-year period, their genre and their production country. Then we performed logit regression to predict if a movie was likely to be 
+nominated for the Oscars based on the gender of its main character.</p>
