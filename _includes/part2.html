@@ -1,3 +1,68 @@
+<p>Now that we have quantified gender inequalities in the movie industry, we want to know if it has consequences 
+    on character representation: can we find typical roles per gender, and if so, what are they?
+</p>
+
+<p>First a quick introduction in this theme with the type of character dataset. Are female roles in movies aligned 
+    with societal stereotypes? Or is it the representation of women on screen that also influences our society? 
+    We won't be able to answer this question, but we can start by visualizing common character tropes by gender:
+</p>
+
 <h4>World Cloud</h4>
 
     <iframe src="/assets/plots/wordcloud_tvtropes.png" width="950" height="255" frameborder="0"></iframe>
+
+<p>Not surprisingly, the main characters the researchers were able to isolate are highly stereotyped! 
+    Actresses are portrayed as ‘dumb’ and the focus is only on their beauty, whereas men are characterized more
+     by their actions ( ‘corporate’ , ‘ hero’, …).
+</p>
+
+<p>To go deeper in this analysis we want to cluster the characters ourselves starting from the plots of the movies. 
+    The authors of the dataset used the CoreNLP toolkit to parse the movie plot summaries. 
+    We then extract the meaningful information about the characters: the action of which they are the agent or patient, 
+    and their attributes. With all of that information, we cluster the characters to identify similar ones:
+</p>
+
+<p>IMAGES CLUSTERS AND ANALYSIS</p>
+
+<p>It's interesting to cluster character types together, but let's see if, by knowing the words that characterize 
+    a character, we can find out its gender! If we are able to find it, this means that the roles are very stereotypical. 
+    </p>
+
+<p>QUIZ</p>
+
+<p>Let’s see if a machine learning classifier could do it! We provide the classifier with the agent verbs, 
+    patient verbs and character attributes as input features, and it outputs the predicted gender.</p>
+
+<p>RESULT CLASSIFIER</p>
+
+<p>An accuracy rate of 0.65 suggests that the classifier has a certain level of predictive power above randomness. 
+    This indicates that there might be a discernible bias in the roles typically portrayed by women and men in movies: 
+    first, women might frequently be cast in nurturing, supportive, or romantic roles, whereas men might often portray 
+    heroic, dominant, or action-oriented characters. Second, female characters might sometimes lack depth or complexity 
+    compared to their male counterparts, being relegated to secondary roles or one-dimensional stereotypes. 
+    Finally, gender biases might influence how emotions are depicted, with women often shown as more emotional 
+    or sensitive, while men are portrayed as stoic or aggressive.
+</p>
+
+<p>Another interesting insight on the movies we can get through the plots is its general sentiment. 
+    Is the movie plot rather positive, neutral or negative ? And concerning our topic of interest, 
+    does the proportion of female characters or on the gender of the main character influence the sentiment of the movie? 
+    To perform a causal analysis, we matched the movies on the release year, the movie genre, and the country of release.
+</p>
+
+<p>RESULTS OF SENTIMENT WITH PERCENTAGE OF FEMALE</p>
+
+<p>The coefficient associated with the percentage of females to predict the sentiment of the movie is significant 
+    but very low. Thus the percentage of females is slightly positively associated with the sentiment of the movie. 
+    However, as the Bechdel test highlights, it is not sufficient to have women in a movie: the Bechdel test is 
+    passed only if: (1) the movie has at least two women in it, who (2) who talk to each other, about (3) something
+    besides a man. To dig deeper in this, let’s analyze the influence of the main character’s gender on the sentiment.
+</p>
+
+<p>RESULTS OF SENTIMENT WITH MAIN CHARACTER’S GENDER</p>
+
+<p>Movies with a feminine main character tend to have a more positive sentiment than movies with a masculine main 
+    character as the coefficient representing a feminine main character is positive, thus increasing the sentiment score. 
+    Indeed, the portrayal of female characters holding a substantial role and their experiences can influence 
+    the sentiment of a movie, shaping it towards themes like empathy, nurturing, resilience, and emotional depth. 
+    This could lead to a more nuanced and emotionally resonant storytelling style.</p>
