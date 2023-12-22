@@ -14,6 +14,8 @@
 Actresses are portrayed as ‘dumb’ and the focus is only on their beauty, whereas men are characterized more by their actions (‘corporate’ , ‘hero’, …).
 </p>
 
+<h4> Characters clustering </h4>
+
 <p>To go deeper in this analysis we want to cluster the characters ourselves starting from the plots of the movies. 
 The authors of the dataset used the CoreNLP toolkit to parse the movie plot summaries. 
 We then extract the meaningful information about the characters: the action of which they are the agent or patient, 
@@ -36,6 +38,8 @@ Clusters 7, 13, 34, and 15 contain fewer than 20% female characters, while Clust
 Attributes in these clusters reveal additional contrasts: fewer women clusters feature attributes related to authority, opposition or high-level professions (e.g., poison, rebellious, prison, political, psychologist, banker, ambassador), while more women clusters highlight emotional or familial attributes (e.g., absent, calm, widow, fiancée, lovely, grandson, nephew, maid, babysitter).
 These differences in verbs and attributes potentially reflect underlying gender biases or societal norms embedded in character portrayal and storytelling. Clusters with fewer women might emphasize action-oriented narratives, authority, or conflict-driven storylines. Conversely, clusters with higher female representation might prioritize emotional depth or familial connections, emphasizing relationships and character development within storytelling contexts.
 However, it is important to highlight that the majority of the clusters don’t show such marked gender differences.</p>
+
+<h4> Classification of characters by gender </h4>
 
 <p>It's interesting to cluster character types together, but let's do a little quiz to see if, by knowing the words that characterize 
     a character, we can find out its gender! If we are able to find it, this means that the roles are very stereotypical.</p>
@@ -74,6 +78,8 @@ patient verbs and character attributes as input features, and it outputs the pre
     Finally, gender biases might influence how emotions are depicted, with women often shown as more emotional 
     or sensitive, while men are portrayed as stoic or aggressive.
 </p>
+
+<h4> Sentiment analysis </h4>
 
 <p>Another interesting insight on the movies we can get through the plots is its general sentiment. 
     Is the movie plot rather positive, neutral or negative ? And concerning our topic of interest, 
